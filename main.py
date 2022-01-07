@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-p', '--path',
                     help='Путь к файлу с напитками, формат .xlsx',
                     type=str,
-                    default='wine3.xlsx')
+                    default='table_wine.xlsx')
 args = parser.parse_args()
 drinks = pd.read_excel(args.path).fillna('').to_dict('records')
 
