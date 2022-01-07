@@ -1,9 +1,9 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
-from collections import defaultdict, OrderedDict
-import pandas as pd
+from collections import OrderedDict, defaultdict
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
+import pandas as pd
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ALL_DEMAND = pd.read_excel('wine3.xlsx').fillna('').to_dict('record')
 
